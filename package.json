@@ -1,0 +1,22 @@
+{
+  "name": "web-collbato-turistic",
+  "version": "1.0.0",
+  "description": "Web turística de Collbató",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "serve:dist": "npx serve dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.0",
+    "parcel": "^2.16.0",
+    "sass": "^1.93.2"
+  },
+  "browserslist": [
+    "defaults",
+    "ie 11"
+  ]
+}

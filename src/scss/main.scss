@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+  color: #1b4d3e; // tono verde inspirado en Montserrat
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background-image: url("../images/collbato.jpg");
+  background-size: cover; // La imagen cubre todo el área
+  background-position: center bottom; // Centrada en el eje X e Y
+  background-repeat: no-repeat; // Evita que se repita
+
+  display: flex;
+  align-items: center; // Centra verticalmente el contenido
+  justify-content: center; // Centra horizontalmente el contenido
+  text-align: center;
+  color: #fff;
+
+  // Capa oscura para mejorar el contraste con el texto
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  // Aseguramos que el contenido del hero quede por encima del overlay
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 1rem;
+  }
+
+  // Adaptabilidad en móviles
+  @media (max-width: 600px) {
+    height: 250px;
+    .hero-content h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
