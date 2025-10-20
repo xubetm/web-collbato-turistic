@@ -9,18 +9,22 @@
     />
     <title>Turisme de Collbató</title>
     <link rel="stylesheet" href="scss/main.scss" />
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
   </head>
   <body>
     <header>
-      <img
-        src="images/logo-ajuntament-collbato.jpeg"
-        alt="imatge-logo-ajuntament-de-collbato"
-      />
-      <nav>
+      <a href="index.html"
+        ><img
+          src="images/logo-ajuntament-collbato.jpeg"
+          alt="imatge-logo-ajuntament-de-collbato"
+      /></a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="menu-nav">
         <ul>
-          <li><a href="index.html" aria-current="page">Inici</a></li>
           <li><a href="categoria.html">Activitats</a></li>
+          <li><a href="restauracio.html">Restauració</a></li>
+          <li><a href="allotjaments.html">Allotjaments</a></li>
+          <li><a href="festivitats.html">Festivitats</a></li>
           <li><a href="links.html">Enllaços</a></li>
         </ul>
       </nav>
@@ -51,5 +55,6 @@
     <footer>
       <p>&copy; 2025 Turisme de Collbató</p>
     </footer>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
