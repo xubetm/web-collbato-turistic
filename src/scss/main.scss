@@ -1,5 +1,4 @@
 /* --- MOBILE FIRST --- */
-/* --- BASE: MOBILE --- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -145,7 +144,6 @@ nav a {
 
   h3 {
     margin-top: 2rem;
-    // margin: 1rem 0;
     font-size: 1.2rem;
   }
 
@@ -223,7 +221,7 @@ nav a {
   color: #333;
 }
 
-/* ==== FORMULARI ==== */
+/* --- FORMULARI --- */
 
 .formulari {
   padding: 2rem 1.5rem;
@@ -236,7 +234,7 @@ form {
   flex-direction: column;
   gap: 1.5rem;
   max-width: 500px;
-  margin: 0 auto; /* centra el formulario */
+  margin: 0 auto;
 }
 
 form div {
@@ -281,6 +279,43 @@ button:hover {
   background-color: #226162;
 }
 
+/* --- FOOTER --- */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+.footer-info p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.footer-social a img:hover {
+  transform: scale(1.2);
+}
+
 /* --- TABLET (≥600px) --- */
 @media (min-width: 600px) {
   header {
@@ -296,7 +331,7 @@ button:hover {
   }
 
   .menu-toggle {
-    display: none; /* Oculta el icono hamburguesa */
+    display: none;
   }
 
   .menu-nav {
@@ -330,7 +365,7 @@ button:hover {
     margin-bottom: 2.5rem;
   }
 
-  /* --- CATEGORIES SECTION --- */
+  /* --- CATEGORIES --- */
   .categories .category-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -350,7 +385,6 @@ button:hover {
   }
 
   /* --- CONTACTE --- */
-
   .contacte {
     padding: 3rem 2rem;
 
@@ -379,6 +413,19 @@ button:hover {
 
   form {
     max-width: 600px;
+  }
+
+  /* --- FOOTER --- */
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-info,
+  .footer-social {
+    text-align: left;
   }
 
   /* --- DESKTOP (≥1024px) --- */
@@ -442,7 +489,6 @@ button:hover {
   }
 
   /* --- CONTACTE --- */
-
   .contacte {
     padding: 4rem 5rem;
 
@@ -469,7 +515,7 @@ button:hover {
     }
   }
 
-  /* --- CONTACTE --- */
+  /* --- FORMULARI --- */
   .formulari {
     padding: 4rem 3rem;
   }
@@ -489,5 +535,15 @@ button:hover {
 
   button {
     font-size: 1.2rem;
+  }
+
+  /* --- FOOTER --- */
+  .footer {
+    padding: 3rem 5rem;
+    font-size: 1rem;
+  }
+
+  .footer-logo img {
+    max-width: 150px;
   }
 }
