@@ -9,7 +9,6 @@
     />
     <title>Turisme de Collbató</title>
     <link rel="stylesheet" href="scss/main.scss" />
-    <!-- <script src="js/main.js"></script> -->
   </head>
   <body>
     <header>
@@ -38,8 +37,38 @@
           oferir-te una experiència única.
         </p>
       </section>
+      <section class="categories">
+        <h2>Descobreix Collbató</h2>
+        <div class="category-grid">
+          <a href="categoria.html" class="category-card">
+            <img src="./images/escalada.jpeg" alt="Activitats a Collbató" />
+            <h3>Activitats</h3>
+          </a>
 
-      <section class="intro">
+          <a href="restauracio.html" class="category-card">
+            <img
+              src="./images/restaurant.jpg"
+              alt="Restaurants i gastronomia"
+            />
+            <h3>Restauració</h3>
+          </a>
+
+          <a href="allotjaments.html" class="category-card">
+            <img src="./images/hotel.jpeg" alt="Allotjaments a Collbató" />
+            <h3>Allotjaments</h3>
+          </a>
+
+          <a href="festivitats.html" class="category-card">
+            <img
+              src="./images/salnitrats.jpeg"
+              alt="Festivitats i tradicions"
+            />
+            <h3>Festivitats</h3>
+          </a>
+        </div>
+      </section>
+
+      <section class="activitats">
         <h2>Què pots descobrir?</h2>
         <ul>
           <li>Rutes de senderisme per Montserrat</li>
@@ -49,6 +78,51 @@
           <li>Tradicions i Festivitats</li>
           <li>Allotjaments amb encant i cases rurals</li>
         </ul>
+      </section>
+      <section class="contacte">
+        <h2>Contacte i Informació Turística</h2>
+        <div class="contacte-content">
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.6666645611163!2d1.8279686758803417!3d41.566087779247404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a48ad1bb48f92d%3A0xd833bbf171987e08!2sAjuntament%20de%20Collbat%C3%B3!5e0!3m2!1sca!2ses!4v1730051212345!5m2!1sca!2ses"
+              width="100%"
+              height="350"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div class="info">
+            <h4><strong>Punt d'Informació Turística</strong></h4>
+            <p>📍 Carrer Bonavista, 20<br />08293 Collbató, Barcelona</p>
+            <p>☎️ Telèfon: 93 777 01 01</p>
+            <p>📧 Email: turisme@collbato.cat</p>
+            <p>🕒 Horari: de dilluns a divendres, 9:00 - 14:00 h</p>
+          </div>
+        </div>
+      </section>
+      <section class="formulari">
+        <h2>Vols més informació?</h2>
+        <form>
+          <div>
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="user_name" required />
+          </div>
+
+          <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="user_email" required />
+          </div>
+
+          <div>
+            <label for="message">Missatge:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
       </section>
     </main>
 

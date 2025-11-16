@@ -17,6 +17,6 @@
   },
   "browserslist": [
     "defaults",
-    "ie 11"
+    "not IE"
   ]
 }
