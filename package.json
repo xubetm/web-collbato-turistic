@@ -2,6 +2,7 @@
   "name": "web-collbato-turistic",
   "version": "1.0.0",
   "description": "Web turística de Collbató",
+  "type": "module",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url /",
@@ -19,5 +20,8 @@
     "defaults",
     "not ie 11",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
 }

@@ -7,16 +7,29 @@
       name="description"
       content="Activitats turístiques a Collbató. Descobreix rutes, excursions i tradicions del poble."
     />
-    <title>Activitats - Collbató</title>
+    <title>Festivitats - Collbató</title>
     <link rel="stylesheet" href="scss/festivitats.scss" />
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <a href="index.html"
-        ><img
-          src="images/logo-ajuntament-collbato.jpeg"
-          alt="imatge-logo-ajuntament-de-collbato"
-      /></a>
+      <a href="index.html">
+        <picture>
+          <source
+            srcset="
+              images/optimized/logo-ajuntament-collbato.webp 400w,
+              images/optimized/logo-ajuntament-collbato.webp 800w
+            "
+            type="image/webp"
+            sizes="(max-width: 600px) 100vw, 150px"
+          />
+          <img
+            src="images/optimized/logo-ajuntament-collbato.webp"
+            alt="Logo Ajuntament de Collbató"
+            width="150"
+          />
+        </picture>
+      </a>
       <button class="menu-toggle" aria-label="Abrir menú">☰</button>
       <nav class="menu-nav">
         <ul>
@@ -29,10 +42,26 @@
       </nav>
     </header>
 
+    <!-- Festivitats -->
     <section class="festivitats-grid">
       <!-- FESTA MAJOR -->
       <div class="festivitat-card">
-        <img src="images/festa-major.jpg" alt="Festa Major" />
+        <picture>
+          <source
+            srcset="
+              images/optimized/festa-major-400.webp   400w,
+              images/optimized/festa-major-800.webp   800w,
+              images/optimized/festa-major-1600.webp 1600w
+            "
+            type="image/webp"
+            sizes="(max-width: 600px) 100vw, 300px"
+          />
+          <img
+            src="images/optimized/festa-major-800.webp"
+            alt="Festa Major"
+            width="300"
+          />
+        </picture>
         <div class="text">
           <h3>Festa Major de Collbató</h3>
           <p>
@@ -54,7 +83,22 @@
 
       <!-- FIRA D'ARTESANIA -->
       <div class="festivitat-card">
-        <img src="images/fira-artesania.jpg" alt="Fira d'Artesania" />
+        <picture>
+          <source
+            srcset="
+              images/optimized/fira-artesania-400.webp   400w,
+              images/optimized/fira-artesania-800.webp   800w,
+              images/optimized/fira-artesania-1600.webp 1600w
+            "
+            type="image/webp"
+            sizes="(max-width: 600px) 100vw, 300px"
+          />
+          <img
+            src="images/optimized/fira-artesania-800.webp"
+            alt="Fira d'Artesania"
+            width="300"
+          />
+        </picture>
         <div class="text">
           <h3>Fira d'Artesania</h3>
           <p>
@@ -71,7 +115,22 @@
 
       <!-- FIRA DE NADAL -->
       <div class="festivitat-card">
-        <img src="images/fira-de-nadal.jpeg" alt="Fira de Nadal" />
+        <picture>
+          <source
+            srcset="
+              images/optimized/fira-de-nadal-400.webp   400w,
+              images/optimized/fira-de-nadal-800.webp   800w,
+              images/optimized/fira-de-nadal-1600.webp 1600w
+            "
+            type="image/webp"
+            sizes="(max-width: 600px) 100vw, 300px"
+          />
+          <img
+            src="images/optimized/fira-de-nadal-800.webp"
+            alt="Fira de Nadal"
+            width="300"
+          />
+        </picture>
         <div class="text">
           <h3>Fira de Nadal</h3>
           <p>
@@ -113,14 +172,26 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-logo">
           <a href="index.html">
-            <img
-              src="images/logo-ajuntament-collbato.jpeg"
-              alt="Logo Ajuntament de Collbató"
-            />
+            <picture>
+              <source
+                srcset="
+                  images/optimized/logo-ajuntament-collbato.webp 400w,
+                  images/optimized/logo-ajuntament-collbato.webp 800w
+                "
+                type="image/webp"
+                sizes="(max-width: 600px) 100vw, 120px"
+              />
+              <img
+                src="images/optimized/logo-ajuntament-collbato.webp"
+                alt="Logo Ajuntament de Collbató"
+                width="120"
+              />
+            </picture>
           </a>
         </div>
         <div class="footer-info">
@@ -131,13 +202,43 @@
         </div>
         <div class="footer-social">
           <a href="#" aria-label="Facebook">
-            <img src="images/facebook.icon.png" alt="Facebook" />
+            <picture>
+              <source
+                srcset="images/optimized/facebook_icon.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/optimized/facebook_icon.webp"
+                alt="Facebook"
+                width="32"
+              />
+            </picture>
           </a>
           <a href="#" aria-label="Instagram">
-            <img src="images/instagram_icon.png" alt="Instagram" />
+            <picture>
+              <source
+                srcset="images/optimized/instagram_icon.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/optimized/instagram_icon.webp"
+                alt="Instagram"
+                width="32"
+              />
+            </picture>
           </a>
           <a href="#" aria-label="Twitter">
-            <img src="images/twitter_icon.png" alt="Twitter" />
+            <picture>
+              <source
+                srcset="images/optimized/twitter_icon.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/optimized/twitter_icon.webp"
+                alt="Twitter"
+                width="32"
+              />
+            </picture>
           </a>
         </div>
       </div>

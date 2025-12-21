@@ -11,12 +11,25 @@
     <link rel="stylesheet" href="scss/activitats.scss" />
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <a href="index.html"
-        ><img
-          src="images/logo-ajuntament-collbato.jpeg"
-          alt="imatge-logo-ajuntament-de-collbato"
-      /></a>
+      <a href="index.html">
+        <picture>
+          <source
+            srcset="
+              images/optimized/logo-ajuntament-collbato.webp 400w,
+              images/optimized/logo-ajuntament-collbato.webp 800w
+            "
+            type="image/webp"
+            sizes="(max-width: 600px) 100vw, 150px"
+          />
+          <img
+            src="images/optimized/logo-ajuntament-collbato.webp"
+            alt="Logo Ajuntament de Collbató"
+            width="150"
+          />
+        </picture>
+      </a>
       <button class="menu-toggle" aria-label="Abrir menú">☰</button>
       <nav class="menu-nav">
         <ul>
@@ -30,45 +43,123 @@
     </header>
 
     <main>
+      <!-- Hero -->
       <section class="activitats-hero">
         <h1>Activitats a Collbató</h1>
         <p>Descobreix les rutes, excursions i tradicions del nostre poble.</p>
       </section>
 
+      <!-- Activitats -->
       <section class="activitats-grid">
+        <!-- Senderisme -->
         <a href="senderisme.html" class="activitat-card">
-          <img src="images/senderisme.jpg" alt="Rutes de senderisme" />
+          <picture>
+            <source
+              srcset="
+                images/optimized/senderisme-400.webp   400w,
+                images/optimized/senderisme-800.webp   800w,
+                images/optimized/senderisme-1600.webp 1600w
+              "
+              type="image/webp"
+              sizes="(max-width: 600px) 100vw, 300px"
+            />
+            <img
+              src="images/optimized/senderisme-800.webp"
+              alt="Rutes de senderisme"
+              width="300"
+            />
+          </picture>
           <h3>Senderisme per Montserrat</h3>
           <p>Rutes guiades i autoguiades amb paisatges espectaculars.</p>
         </a>
 
+        <!-- Excursions a cavall -->
         <a href="rutes-cavall.html" class="activitat-card">
-          <img src="images/rutes-cavall.jpg" alt="Excursions a cavall" />
+          <picture>
+            <source
+              srcset="
+                images/optimized/rutes-cavall-400.webp   400w,
+                images/optimized/rutes-cavall-800.webp   800w,
+                images/optimized/rutes-cavall-1600.webp 1600w
+              "
+              type="image/webp"
+              sizes="(max-width: 600px) 100vw, 300px"
+            />
+            <img
+              src="images/optimized/rutes-cavall-800.webp"
+              alt="Excursions a cavall"
+              width="300"
+            />
+          </picture>
           <h3>Excursions a cavall</h3>
           <p>Visites guiades per conèixer la natura a cavall.</p>
         </a>
 
+        <!-- Escalada i aventura -->
         <a href="escalada.html" class="activitat-card">
-          <img src="images/escalada.jpeg" alt="Escalada i aventura" />
+          <picture>
+            <source
+              srcset="
+                images/optimized/escalada-400.webp   400w,
+                images/optimized/escalada-800.webp   800w,
+                images/optimized/escalada-1600.webp 1600w
+              "
+              type="image/webp"
+              sizes="(max-width: 600px) 100vw, 300px"
+            />
+            <img
+              src="images/optimized/escalada-800.webp"
+              alt="Escalada i aventura"
+            />
+          </picture>
           <h3>Escalada i activitats d'aventura</h3>
           <p>Per als més aventurers: escalada, tirolina i més.</p>
         </a>
 
+        <!-- Gastronomia local -->
         <a href="gastronomia_local.html" class="activitat-card">
-          <img src="images/gastronomia.jpg" alt="Gastronomia local" />
+          <picture>
+            <source
+              srcset="
+                images/optimized/gastronomia-400.webp   400w,
+                images/optimized/gastronomia-800.webp   800w,
+                images/optimized/gastronomia-1600.webp 1600w
+              "
+              type="image/webp"
+              sizes="(max-width: 600px) 100vw, 300px"
+            />
+            <img
+              src="images/optimized/gastronomia-800.webp"
+              alt="Gastronomia local"
+              width="300"
+            />
+          </picture>
           <h3>Gastronomia local</h3>
           <p>Productes de proximitat i plats típics del poble.</p>
         </a>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-logo">
           <a href="index.html">
-            <img
-              src="images/logo-ajuntament-collbato.jpeg"
-              alt="Logo Ajuntament de Collbató"
-            />
+            <picture>
+              <source
+                srcset="
+                  images/optimized/logo-ajuntament-collbato.webp 400w,
+                  images/optimized/logo-ajuntament-collbato.webp 800w
+                "
+                type="image/webp"
+                sizes="(max-width: 600px) 100vw, 120px"
+              />
+              <img
+                src="images/optimized/logo-ajuntament-collbato.webp"
+                alt="Logo Ajuntament de Collbató"
+                width="120"
+              />
+            </picture>
           </a>
         </div>
         <div class="footer-info">
@@ -79,13 +170,43 @@
         </div>
         <div class="footer-social">
           <a href="#" aria-label="Facebook">
-            <img src="images/facebook.icon.png" alt="Facebook" />
+            <picture>
+              <source
+                srcset="images/optimized/facebook_icon.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/optimized/facebook_icon.webp"
+                alt="Facebook"
+                width="32"
+              />
+            </picture>
           </a>
           <a href="#" aria-label="Instagram">
-            <img src="images/instagram_icon.png" alt="Instagram" />
+            <picture>
+              <source
+                srcset="images/optimized/instagram_icon.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/optimized/instagram_icon.webp"
+                alt="Instagram"
+                width="32"
+              />
+            </picture>
           </a>
           <a href="#" aria-label="Twitter">
-            <img src="images/twitter_icon.png" alt="Twitter" />
+            <picture>
+              <source
+                srcset="images/optimized/twitter_icon.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/optimized/twitter_icon.webp"
+                alt="Twitter"
+                width="32"
+              />
+            </picture>
           </a>
         </div>
       </div>
