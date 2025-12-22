@@ -4,6 +4,15 @@ body {
   margin: 0;
   background-color: #f7f7f7;
   color: #333;
+  line-height: 1.6;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #4caf50;
+  outline-offset: 3px;
 }
 
 /* Header */
@@ -33,6 +42,7 @@ nav ul li {
 nav a {
   text-decoration: none;
   color: #333;
+  transition: color 0.3s ease;
 }
 
 .menu-toggle {
@@ -76,30 +86,19 @@ nav a {
 .menu-nav.active {
   display: block;
   background-color: rgb(228, 250, 228);
-  height: 50vh;
+  max-height: 50vh;
   opacity: 1;
   transform: translateY(0);
+  overflow-y: auto;
 }
 
 /* --- ACTIVITATS HERO --- */
-.hero-svg polygon {
+.hero-svg {
   display: none;
-  animation: pulse 2s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.8;
-  }
 }
 
 .activitats-hero {
+  display: block;
   background-color: #e6f2ff;
   padding: 3rem 1.5rem;
   text-align: center;
@@ -212,6 +211,33 @@ nav a {
   transform: scale(1.2);
 }
 
+/* --- HOVER NOMÉS EN DISPOSITIUS AMB RATOLÍ --- */
+@media (hover: hover) {
+  nav a:hover {
+    color: #4caf50;
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  button:hover {
+    background-color: #226162;
+  }
+
+  .footer-social img:hover {
+    transform: scale(1.2);
+  }
+}
+
+nav a,
+.category-card,
+button,
+.footer-social img {
+  transition: all 0.3s ease;
+}
+
 /* --- TABLET --- */
 @media (min-width: 600px) {
   header {
@@ -284,19 +310,19 @@ nav a {
       font-size: 1.1rem;
     }
   }
-}
 
-/* --- FOOTER --- */
-.footer-content {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
-}
+  /* --- FOOTER --- */
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
 
-.footer-info,
-.footer-social {
-  text-align: left;
+  .footer-info,
+  .footer-social {
+    text-align: left;
+  }
 }
 
 /* --- DESKTOP --- */
@@ -326,6 +352,31 @@ nav a {
     }
     p {
       font-size: 1.2rem;
+    }
+  }
+
+  .hero-svg {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .hero-svg polygon {
+    display: block;
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
     }
   }
 

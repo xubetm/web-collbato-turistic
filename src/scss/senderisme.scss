@@ -1,58 +1,110 @@
-* {
-  box-sizing: border-box;
+/* --- MOBILE FIRST --- */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
 }
 
-body {
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fefefe;
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #4caf50;
+  outline-offset: 3px;
 }
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle {
+  font-size: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 20;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .menu-nav ul {
-  display: flex;
-  gap: 1rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-nav li {
+  margin: 1rem 0;
 }
 
 .menu-nav a {
   text-decoration: none;
   color: #333;
-  transition: color 0.3s;
+  font-size: 1.2rem;
 }
 
-.menu-nav a:hover {
-  color: #0066cc;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
+.menu-nav.active {
+  display: block;
+  background-color: rgb(228, 250, 228);
+  max-height: 50vh;
+  opacity: 1;
+  transform: translateY(0);
+  overflow-y: auto;
 }
 
 /* Imatge destacada */
 .activitat-destacada {
   position: relative;
+  height: 65vh;
   width: 100%;
-  aspect-ratio: 16/9;
   overflow: hidden;
 }
 
-.activitat-destacada picture,
+.activitat-destacada picture {
+  position: absolute;
+  inset: 0;
+}
+
 .activitat-destacada img {
   width: 100%;
   height: 100%;
@@ -62,22 +114,24 @@ header {
 
 .text-overlay {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.5rem;
   color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  max-width: 80%;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
 .text-overlay h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .text-overlay p {
   font-size: 1rem;
+  line-height: 1.4;
 }
 
 /* Contingut principal */
@@ -102,60 +156,175 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Footer */
+/* --- FOOTER --- */
 .footer {
-  background-color: #f8f8f8;
-  padding: 2rem 1rem;
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  color: #333;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
   align-items: center;
-  gap: 1rem;
 }
 
-.footer-info p,
-.footer-copy {
+.footer-logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+.footer-info p {
   margin: 0.3rem 0;
+  line-height: 1.5;
 }
 
-/* Social icons */
-.footer-social {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+  transition: transform 0.2s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .menu-nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
+.footer-social a img:hover {
+  transform: scale(1.2);
+}
+
+/* --- HOVER NOMÉS EN DISPOSITIUS AMB RATOLÍ --- */
+@media (hover: hover) {
+  nav a:hover {
+    color: #4caf50;
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  button:hover {
+    background-color: #226162;
+  }
+
+  .footer-social img:hover {
+    transform: scale(1.2);
+  }
+}
+
+nav a,
+.category-card,
+button,
+.footer-social img {
+  transition: all 0.3s ease;
+}
+
+/* TABLETS */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.4rem;
   }
 
   .menu-toggle {
+    display: none;
+  }
+
+  .menu-nav {
     display: block;
+    position: static;
+    opacity: 1;
+    transform: none;
+    background: none;
+    padding: 0;
+  }
+
+  .menu-nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .menu-nav li {
+    margin: 0;
+  }
+
+  .activitat-destacada {
+    height: 70vh;
   }
 
   .text-overlay {
-    font-size: 0.9rem;
-    padding: 0.8rem 1.2rem;
+    padding: 3rem 3rem;
   }
 
   .text-overlay h1 {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
+  }
+
+  .text-overlay p {
+    font-size: 1.1rem;
+    max-width: 70%;
+  }
+
+  /* --- FOOTER --- */
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-info,
+  .footer-social {
+    text-align: left;
   }
 }
 
 @media (min-width: 1200px) {
-  .text-overlay {
-    max-width: 50%;
+  header {
+    padding: 1rem 5rem;
+  }
+
+  nav ul {
+    gap: 3rem;
+    font-size: 1.5rem;
   }
 
   .detall-activitat {
     padding: 3rem 2rem;
+  }
+
+  .activitat-destacada {
+    height: 75vh;
+  }
+
+  .text-overlay {
+    padding: 4rem 5rem;
+  }
+
+  .text-overlay h1 {
+    font-size: 3rem;
+  }
+
+  .text-overlay p {
+    font-size: 1.2rem;
+    max-width: 50%;
+  }
+
+  /* --- FOOTER --- */
+  .footer {
+    padding: 3rem 5rem;
+    font-size: 1rem;
+  }
+
+  .footer-logo img {
+    max-width: 150px;
   }
 }

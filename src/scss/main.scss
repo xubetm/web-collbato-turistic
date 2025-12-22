@@ -148,7 +148,7 @@ nav a {
 .categories {
   padding: 2rem 1rem;
   text-align: center;
-  margin: 0 3rem;
+  margin: 0 0.5rem;
 
   h2 {
     font-size: 1.8rem;
@@ -343,6 +343,10 @@ button:hover {
   transition: transform 0.2s ease;
 }
 
+.footer-social a img:hover {
+  transform: scale(1.2);
+}
+
 /* --- HOVER NOMÉS EN DISPOSITIUS AMB RATOLÍ --- */
 @media (hover: hover) {
   nav a:hover {
@@ -361,10 +365,13 @@ button:hover {
   .footer-social img:hover {
     transform: scale(1.2);
   }
+}
 
-  .footer-social a img:hover {
-    transform: scale(1.2);
-  }
+nav a,
+.category-card,
+button,
+.footer-social img {
+  transition: all 0.3s ease;
 }
 
 /* --- TABLET (≥600px) --- */

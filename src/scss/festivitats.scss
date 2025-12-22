@@ -4,6 +4,15 @@ body {
   margin: 0;
   background-color: #f7f7f7;
   color: #333;
+  line-height: 1.6;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #4caf50;
+  outline-offset: 3px;
 }
 
 /* Header */
@@ -171,6 +180,33 @@ nav a {
 
 .footer-social a img:hover {
   transform: scale(1.2);
+}
+
+/* --- HOVER NOMÉS EN DISPOSITIUS AMB RATOLÍ --- */
+@media (hover: hover) {
+  nav a:hover {
+    color: #4caf50;
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  button:hover {
+    background-color: #226162;
+  }
+
+  .footer-social img:hover {
+    transform: scale(1.2);
+  }
+}
+
+nav a,
+.category-card,
+button,
+.footer-social img {
+  transition: all 0.3s ease;
 }
 
 /* --- TABLET (≥600px) --- */
