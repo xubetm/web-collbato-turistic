@@ -118,6 +118,32 @@ nav a {
   margin-bottom: 1rem;
 }
 
+/* Estils per al SVG */
+.hero-svg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+
+/* Animació simple: canvi de color del cercle */
+@keyframes pulse {
+  0% {
+    fill: #ff6b6b;
+  }
+  50% {
+    fill: #feca57;
+  }
+  100% {
+    fill: #ff6b6b;
+  }
+}
+
+.hero-svg circle {
+  animation: pulse 3s infinite;
+}
+
 /* --- CATEGORIES SECTION --- */
 .categories {
   padding: 2rem 1rem;

@@ -125,6 +125,17 @@ nav a {
   color: #444;
 }
 
+.youtube-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.youtube-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* --- FOOTER --- */
 .footer {
   background-color: #333;
@@ -242,6 +253,13 @@ nav a {
     .festivitat-card iframe {
       width: 400px;
       height: 400px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .festivitat-card:hover img,
+    .festivitat-card:hover iframe {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .festivitat-card .text {

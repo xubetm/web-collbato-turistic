@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fefefe;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.menu-nav a:hover {
+  color: #0066cc;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* Imatge destacada */
+.activitat-destacada {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.activitat-destacada picture,
+.activitat-destacada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.text-overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-overlay p {
+  font-size: 1rem;
+}
+
+/* Contingut principal */
+.detall-activitat {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.detall-activitat h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.detall-activitat p {
+  margin-bottom: 1rem;
+}
+
+.detall-activitat ul {
+  list-style: disc;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f8f8;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-info p,
+.footer-copy {
+  margin: 0.3rem 0;
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .text-overlay {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .text-overlay h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-overlay {
+    max-width: 50%;
+  }
+
+  .detall-activitat {
+    padding: 3rem 2rem;
+  }
+}
