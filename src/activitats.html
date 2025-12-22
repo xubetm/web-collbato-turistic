@@ -8,30 +8,40 @@
       content="Activitats turístiques a Collbató. Descobreix rutes, excursions i tradicions del poble."
     />
     <title>Activitats - Collbató</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/optimized/favicon_icon.webp" />
+    <link
+      rel="icon"
+      type="image/webp"
+      href="./images/original/favicon.ico.png"
+    />
+
     <link rel="stylesheet" href="scss/activitats.scss" />
   </head>
+
   <body>
     <!-- Header -->
     <header>
       <a href="index.html">
         <picture>
           <source
-            srcset="
-              images/optimized/logo-ajuntament-collbato.webp 400w,
-              images/optimized/logo-ajuntament-collbato.webp 800w
-            "
+            srcset="images/optimized/logo-ajuntament-collbato.webp"
             type="image/webp"
             sizes="(max-width: 600px) 100vw, 150px"
           />
           <img
-            src="images/optimized/logo-ajuntament-collbato.webp"
+            src="images/original/logo-ajuntament-collbato.jpeg"
             alt="Logo Ajuntament de Collbató"
             width="150"
+            height="150"
           />
         </picture>
       </a>
+
       <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-      <nav class="menu-nav">
+
+      <nav class="menu-nav" aria-label="Navegació principal">
         <ul>
           <li><a href="activitats.html">Activitats</a></li>
           <li><a href="restauracio.html">Restauració</a></li>
@@ -42,7 +52,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <!-- Hero -->
       <section class="activitats-hero">
         <h1>Activitats a Collbató</h1>
@@ -64,9 +74,10 @@
               sizes="(max-width: 600px) 100vw, 300px"
             />
             <img
-              src="images/optimized/senderisme-800.webp"
+              src="images/original/senderisme.jpg"
               alt="Rutes de senderisme"
               width="300"
+              height="200"
             />
           </picture>
           <h3>Senderisme per Montserrat</h3>
@@ -86,9 +97,10 @@
               sizes="(max-width: 600px) 100vw, 300px"
             />
             <img
-              src="images/optimized/rutes-cavall-800.webp"
+              src="images/original/rutes-cavall.jpg"
               alt="Excursions a cavall"
               width="300"
+              height="200"
             />
           </picture>
           <h3>Excursions a cavall</h3>
@@ -108,8 +120,10 @@
               sizes="(max-width: 600px) 100vw, 300px"
             />
             <img
-              src="images/optimized/escalada-800.webp"
+              src="images/original/escalada.jpeg"
               alt="Escalada i aventura"
+              width="300"
+              height="200"
             />
           </picture>
           <h3>Escalada i activitats d'aventura</h3>
@@ -129,9 +143,10 @@
               sizes="(max-width: 600px) 100vw, 300px"
             />
             <img
-              src="images/optimized/gastronomia-800.webp"
+              src="images/original/gastronomia.jpg"
               alt="Gastronomia local"
               width="300"
+              height="200"
             />
           </picture>
           <h3>Gastronomia local</h3>
@@ -147,17 +162,15 @@
           <a href="index.html">
             <picture>
               <source
-                srcset="
-                  images/optimized/logo-ajuntament-collbato.webp 400w,
-                  images/optimized/logo-ajuntament-collbato.webp 800w
-                "
+                srcset="images/optimized/logo-ajuntament-collbato.webp"
                 type="image/webp"
                 sizes="(max-width: 600px) 100vw, 120px"
               />
               <img
-                src="images/optimized/logo-ajuntament-collbato.webp"
+                src="images/original/logo-ajuntament-collbato.jpeg"
                 alt="Logo Ajuntament de Collbató"
                 width="120"
+                height="120"
               />
             </picture>
           </a>
@@ -176,9 +189,10 @@
                 type="image/webp"
               />
               <img
-                src="images/optimized/facebook_icon.webp"
+                src="images/original/facebook.icon.png"
                 alt="Facebook"
                 width="32"
+                height="32"
               />
             </picture>
           </a>
@@ -189,9 +203,10 @@
                 type="image/webp"
               />
               <img
-                src="images/optimized/instagram_icon.webp"
+                src="images/original/instagram_icon.png"
                 alt="Instagram"
                 width="32"
+                height="32"
               />
             </picture>
           </a>
@@ -202,9 +217,10 @@
                 type="image/webp"
               />
               <img
-                src="images/optimized/twitter_icon.webp"
+                src="images/original/twitter_icon.png"
                 alt="Twitter"
                 width="32"
+                height="32"
               />
             </picture>
           </a>
