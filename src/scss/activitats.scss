@@ -83,6 +83,7 @@ nav a {
 
 /* --- ACTIVITATS HERO --- */
 .hero-svg polygon {
+  display: none;
   animation: pulse 2s infinite ease-in-out;
 }
 
@@ -245,6 +246,10 @@ nav a {
 
   .menu-nav li {
     margin: 0;
+  }
+
+  .hero-svg polygon {
+    display: block;
   }
 
   .activitats-grid {
