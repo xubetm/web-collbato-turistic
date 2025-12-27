@@ -343,6 +343,11 @@ button:hover {
   transition: transform 0.2s ease;
 }
 
+.footer-info p a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .footer-social a img:hover {
   transform: scale(1.2);
 }
