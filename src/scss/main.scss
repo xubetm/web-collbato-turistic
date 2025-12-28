@@ -297,7 +297,8 @@ textarea {
 }
 
 button {
-  background-color: #1f5f61;
+  background-color: #ff6b6b;
+  color: #fff;
   border: none;
   padding: 0.9rem 1.2rem;
   font-size: 1.1rem;
@@ -307,7 +308,7 @@ button {
 }
 
 button:hover {
-  background-color: #226162;
+  background-color: #1f5f61;
 }
 
 /* --- FOOTER --- */
@@ -361,10 +362,6 @@ button:hover {
   .category-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  button:hover {
-    background-color: #226162;
   }
 
   .footer-social img:hover {
